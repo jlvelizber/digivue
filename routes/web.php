@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DigimonController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -25,9 +26,7 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/digimundo', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/digimundo', [DigimonController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

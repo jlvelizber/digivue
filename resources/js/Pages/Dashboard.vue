@@ -1,20 +1,30 @@
 <script setup lang="ts">
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head } from '@inertiajs/vue3';
+import DigimonList from '@/Components/DigimonList.vue';
+import DigimonPaginator from '@/Components/DigimonPaginator.vue';
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+import { DigimonListPaginator } from '@/types/index'
+
+defineProps<{
+    digimonList: DigimonListPaginator
+}>();
 </script>
 
 <template>
-    <Head title="Dashboard" />
+    <Head title="Digimundo" />
 
     <AuthenticatedLayout>
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Dashboard</h2>
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Digimundo</h2>
         </template>
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 text-gray-900">You're logged in!</div>
+                    <div class="p-6 text-gray-900">
+                        <DigimonList :digimons="digimonList.content"/>
+                        <DigimonPaginator :paginator="digimonList.pageable"/>
+                    </div>
                 </div>
             </div>
         </div>
