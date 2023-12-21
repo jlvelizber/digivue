@@ -16,6 +16,8 @@ Bienvenidos al directorio de Digimons (de mis series favoritas). En esta prueba 
     ```
         composer install
     ```
+3.1 En caso de no autogenerarse el arcihvo ```.env``` renombrar ```.env.example``` por ```.env``` 
+
 4. Instalar las dependencias NodeJS  
 
     Npm
