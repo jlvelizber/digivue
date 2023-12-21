@@ -91,8 +91,8 @@ Bienvenidos al directorio de Digimons (de mis series favoritas). En esta prueba 
     MAIL_MAILER=smtp
     MAIL_HOST=sandbox.smtp.mailtrap.io
     MAIL_PORT=2525
-    MAIL_USERNAME=37849138a1b9ae
-    MAIL_PASSWORD=b3fd04a6710016
+    MAIL_USERNAME=username
+    MAIL_PASSWORD=password
     MAIL_ENCRYPTION=tls
     MAIL_FROM_ADDRESS="hello@example.com"
     MAIL_FROM_NAME="${APP_NAME}"
