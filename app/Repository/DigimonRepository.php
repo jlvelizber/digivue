@@ -37,8 +37,18 @@ class DigimonRepository implements DigimonRepositoryInterface
         return [];
     }
 
-
-    public function get($id)
+    /**
+     * Busca un digimon
+     *
+     * @param int $id : id del digimon
+     * @return array Informacion del Dgimon | null si no lo encuentra
+     */
+    public function get(int $id)
     {
+        $response = Http::get($this->apiUrl . "/".$id);
+        if($response->successful()) {
+            return $response->json();
+        }
+        return null;
     }
 }

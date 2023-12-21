@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-    <Link :href="route('dashboard')">
+    <Link :href="route('digimon.show', digimon.id)">
     <div class="bg-gray-100 hover:bg-gray-200 p-2">
         <img v-bind:src="digimon.image" class="object-cover" />
         <p class="text-center text-gray-500 hover:text-gray-700"> #{{ digimon.id }}</p>

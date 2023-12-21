@@ -42,10 +42,20 @@ class DigimonController extends Controller
 
     }
     
-    
-    public function show(int $id)
+    /**
+     * Muestra la informacion de un digimon
+     *
+     * @param integer $id
+     * @return Response
+     */
+    public function show(int $id): Response
     {
+       
+       $digimon = $this->digiRepo->get($id);
 
+       if(!$digimon) return response("Digmon no existe");
+
+       return Inertia::render('DigimonDetail', ['digimon' => $digimon]);
     }
 
 

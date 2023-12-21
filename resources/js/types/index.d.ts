@@ -15,6 +15,7 @@ export type Digimon = {
     levels?: any[];
     types?: any[];
     attributes?: any[];
+    fields?: any[];
 }
 
 export type Pagineable = {
