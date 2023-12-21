@@ -59,14 +59,7 @@ Bienvenidos al directorio de Digimons (de mis series favoritas). En esta prueba 
 
 ## Configuración
 
-1.- Ejecutar las migraciones de Laravel
-
-    ```
-        php artisan migrate
-    
-    ```
-
-2. Editar archivo ```.env``` 
+1. Editar archivo ```.env``` 
 
     ```
         APP_URL=http://localhost => por tu dominio
@@ -97,6 +90,12 @@ Bienvenidos al directorio de Digimons (de mis series favoritas). En esta prueba 
     MAIL_ENCRYPTION=tls
     MAIL_FROM_ADDRESS="hello@example.com"
     MAIL_FROM_NAME="${APP_NAME}"
+    ```
+2.- Ejecutar las migraciones de Laravel
+
+    ```
+        php artisan migrate
+    
     ```
 # NOTA 
 en el archivo ``` .env.example``` se encuentra definida ```DIGIMON_API_URL``` que tiene la url de la API  
