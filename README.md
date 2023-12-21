@@ -18,6 +18,12 @@ Bienvenidos al directorio de Digimons (de mis series favoritas). En esta prueba 
     ```
 3.1 En caso de no autogenerarse el arcihvo ```.env``` renombrar ```.env.example``` por ```.env``` 
 
+3.2 Ejecutar el siguiente comando 
+
+    ```
+    php artisan key:generate
+    ```
+
 4. Instalar las dependencias NodeJS  
 
     Npm
